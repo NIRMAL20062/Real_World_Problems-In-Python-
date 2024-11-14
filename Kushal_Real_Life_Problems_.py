@@ -63,7 +63,7 @@ print(max(list))
 # Q5. A bank records the daily transactions of 20 customers. Some transactions are deposits, and some are withdrawals. Write a program that calculates the total deposit and withdrawal amounts for each customer.
 
 
-dict1={'Alice': [-1873, -1039, -1106, -317, 1461], 'Bob': [-2153, 648, 1415, -2460, 576], 'Charlie': [80, 550, 1283, -2421, -2119], 'David': [470, 2417, -1108, -1835, -980], 'Eve': [1472, -1897, 202, -1299, -1016], 'Frank': [-2908, 893, -1069, 2058, 2879], 'Grace': [-2980, 1757, 1101, 2828, -2281], 'Hannah': [1813, 932, 1119, 2267, 609], 'Isaac': [-2354, -2618, 175, 111, -195], 'Jack': [-1964, 2700, -658, 386, 1017], 'Kara': [1707, 2126, 2187, 2550, 2571], 'Liam': [656, 617, 1484, 1270, -70], 'Mia': [-732, 377, -1000, 585, 2812], 'Noah': [-1048, 2942, -2242, -394, 581], 'Olivia': [-1180, -2142, -1436, -2188, 2857], 'Paul': [-2561, -1214, 2524, 835, 2532], 'Quinn': [-1195, 1388, -1510, 2044, -2154], 'Ruby': [-2849, 1068, -1864, 2967, -550], 'Sam': [-2422, -607, 1773, 610, -90], 'Tina': [-1070, 2911, -238, 1538, 2513]}
+""" dict1={'Alice': [-1873, -1039, -1106, -317, 1461], 'Bob': [-2153, 648, 1415, -2460, 576], 'Charlie': [80, 550, 1283, -2421, -2119], 'David': [470, 2417, -1108, -1835, -980], 'Eve': [1472, -1897, 202, -1299, -1016], 'Frank': [-2908, 893, -1069, 2058, 2879], 'Grace': [-2980, 1757, 1101, 2828, -2281], 'Hannah': [1813, 932, 1119, 2267, 609], 'Isaac': [-2354, -2618, 175, 111, -195], 'Jack': [-1964, 2700, -658, 386, 1017], 'Kara': [1707, 2126, 2187, 2550, 2571], 'Liam': [656, 617, 1484, 1270, -70], 'Mia': [-732, 377, -1000, 585, 2812], 'Noah': [-1048, 2942, -2242, -394, 581], 'Olivia': [-1180, -2142, -1436, -2188, 2857], 'Paul': [-2561, -1214, 2524, 835, 2532], 'Quinn': [-1195, 1388, -1510, 2044, -2154], 'Ruby': [-2849, 1068, -1864, 2967, -550], 'Sam': [-2422, -607, 1773, 610, -90], 'Tina': [-1070, 2911, -238, 1538, 2513]}
 
 # Method-1
 for key,value in dict1.items():
@@ -82,17 +82,22 @@ for key, value in dict1.items():
         deposit = sum(x for x in value if x > 0)
         withdrawal = sum(x for x in value if x < 0)
         print(f'For customer {key} deposit is: {deposit}')
-        print(f'For customer {key} withdrawal is: {withdrawal}')
+        print(f'For customer {key} withdrawal is: {withdrawal}') """
 
 
 #Q6. A cafeteria has a menu of 15 items. Every day, the cafeteria gives a random discount of 5%, 10%, or 15% on all items. Write a program to calculate the new prices for each item after the discount is applied.
 
 # Make  dictionaries
+""" import random
+dicts={"Pesty":90,"Magii":80,"Smoothy":50}
+new_dicts={}
+list1=[5,10,15]
 
-
-
-
-
+for key,value in dicts.items():
+    new_price=value-value*(random.choice(list1)/100)
+    print(f'New price of {key} is: {new_price}')
+    new_dicts[key]=new_price
+print(new_dicts) """
 
 
 
