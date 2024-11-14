@@ -7,5 +7,10 @@ students_scores = [
     # Add more lists for each of the 30 students
     # ...
 ]
+lists=[]
 for i in range(len(students_scores)):
-    
+    for j in range(len(students_scores[i])):
+        total = 0
+        avg=sum(students_scores[j-1])/len(students_scores[i])
+        lists.append(avg)
+print(lists)
