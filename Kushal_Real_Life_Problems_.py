@@ -88,7 +88,7 @@ for key, value in dict1.items():
 #Q6. A cafeteria has a menu of 15 items. Every day, the cafeteria gives a random discount of 5%, 10%, or 15% on all items. Write a program to calculate the new prices for each item after the discount is applied.
 
 # Make  dictionaries
-""" import random
+import random
 dicts={"Pesty":90,"Magii":80,"Smoothy":50}
 new_dicts={}
 list1=[5,10,15]
@@ -97,7 +97,7 @@ for key,value in dicts.items():
     new_price=value-value*(random.choice(list1)/100)
     print(f'New price of {key} is: {new_price}')
     new_dicts[key]=new_price
-print(new_dicts) """
+print(new_dicts)
 
 
 
