@@ -9,8 +9,13 @@ students_scores = [
 ]
 lists=[]
 for i in range(len(students_scores)):
-    for j in range(len(students_scores[i])):
-        total = 0
-        avg=sum(students_scores[j-1])/len(students_scores[i])
-        lists.append(avg)
+            for j in range(len(students_scores[i])): 
+                total=sum(students_scores[i])   
+                avg=total/len(students_scores[i])
+            lists.append(avg)
+            
 print(lists)
+
+
+""" x=[85, 90, 78, 92, 88]
+print(sum(x)) """
