@@ -87,6 +87,7 @@ for key, value in dict1.items():
 
 #Q6. A cafeteria has a menu of 15 items. Every day, the cafeteria gives a random discount of 5%, 10%, or 15% on all items. Write a program to calculate the new prices for each item after the discount is applied.
 
+# make  dictionaries
 
 
 
