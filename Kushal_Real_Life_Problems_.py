@@ -39,21 +39,23 @@ print(dict1) """
 dict1={'Alice': 16, 'Bob': 19, 'Charlie': 2, 'David': 1, 'Eve': 28, 'Frank': 26, 'Grace': 13, 'Hannah': 23, 'Isaac': 21, 'Jack': 13, 'Kara': 17, 'Liam': 28, 'Mia': 12, 'Noah': 23, 'Olivia': 4, 'Paul': 14, 'Quinn': 30, 'Ruby': 32, 'Sam': 14, 'Tina': 7}
 list1=[]
 for key,value in dict1.items():
-
     #  print(key,end=' ')
     #  print(value,end=',')
-     maxo1=max(dict1.values())
-     
-print(maxo1)
+        maxo1=max(dict1.values())
+print(key,maxo1)
       
 
 
+#Q4. A movie website has ratings from 5 users for 3 different movies. Each user gives a rating between 1 to 5. Write a program to find the highest-rated movie.
 
-
-
-
-
-
+dict1={"A":[1,2,3],"B":[4,5,6],"C":[2,4,1],"D":[1,2,1],"E":[1,1,1]}
+list=[]
+for value in dict1.values(): #iterating over values
+        sum=0
+        for ele in value:    #iterating over ele in values
+                sum=sum+ele
+        list.append(sum)     #apending in the list
+print(max(list))
 
 
 
