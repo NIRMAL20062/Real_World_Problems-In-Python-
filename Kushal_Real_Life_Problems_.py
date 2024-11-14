@@ -24,12 +24,38 @@ print(sum(x)) """
 
 # Q2 . A store has 10 different items. The store manager wants to apply a 10% discount on every item that costs more than INR 50. Write a program to display the updated prices for each item.
 
-dicts={'Notebook':60,"Iphone":100,"Mobile":30}
+""" dicts={'Notebook':60,"Iphone":100,"Mobile":30}
 dict1={}
 for i in dicts:
     x=(dicts[i])
     if x>50: 
         discounted_price=((dicts[i] )-(((dicts[i])*(10/100))))
         dict1[i]=discounted_price
-print(dict1)
+print(dict1) """
+
+
+# Q3. There is a running competition with 20 participants. You need to find the top 3 participants who ran the fastest.
+
+dict1={'Alice': 16, 'Bob': 19, 'Charlie': 2, 'David': 1, 'Eve': 28, 'Frank': 26, 'Grace': 13, 'Hannah': 23, 'Isaac': 21, 'Jack': 13, 'Kara': 17, 'Liam': 28, 'Mia': 12, 'Noah': 23, 'Olivia': 4, 'Paul': 14, 'Quinn': 30, 'Ruby': 32, 'Sam': 14, 'Tina': 7}
+list1=[]
+for key,value in dict1.items():
+
+    #  print(key,end=' ')
+    #  print(value,end=',')
+     maxo1=max(dict1.values())
+     
+print(maxo1)
+      
+
+
+
+
+
+
+
+
+
+
+
+
 
