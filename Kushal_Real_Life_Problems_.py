@@ -233,7 +233,7 @@ print(attendence_percentage()) """
 
 # Q16. Given a username string, return True if the username is valid (must be between 6 and 12 characters and contain only alphanumeric characters).
 
-def username():
+""" def username():
     str="Nirmal2608"
     import re
     x = re.match('^[a-zA-Z0-9]{6,12}', str)
@@ -243,7 +243,40 @@ def username():
     else:
         print('False')
 # print(username())
-(username())
+(username()) """
+
+
+# Q17. Given the current room conditions, find out if the air conditioner should be turned on.
+
+# Used AI for Help
+
+
+def should_turn_on_ac(current_temperature, current_humidity, desired_temperature=24):
+    # Check if the current temperature exceeds the desired temperature
+    if current_temperature > desired_temperature:
+        return True
+    # Check if the humidity is above a comfortable level (e.g., 60%)
+    elif current_humidity > 60:
+        return True
+    else:
+        return False
+
+# Example usage
+current_temp = 28  # Current temperature in °C
+current_humidity = 65  # Current humidity in %
+
+if should_turn_on_ac(current_temp, current_humidity):
+    print("The air conditioner should be turned on.")
+else:
+    print("The air conditioner can remain off.")
+
+
+
+
+
+
+
+
 
 
 
