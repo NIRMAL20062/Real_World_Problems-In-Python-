@@ -142,7 +142,7 @@ print(list) """
 #Q10. A sports coach needs to select 5 players from a pool of 12 for a basketball team. Write a program to calculate the number of different ways the coach can select 5 players.
 # Combination npr=n!/((n-r)!*r!)
 
-n=12 #number of players
+""" n=12 #number of players
 r= 5 #number of players to be selected
 c=n-r
 def fact1(x):
@@ -152,8 +152,21 @@ def fact1(x):
         x=x-1
     return fact
 combination=fact1(n)/(fact1(c)*(fact1(r)))
-print(combination)
+print(combination) """
 
 
+# Q11. A fitness tracker records the number of steps a person takes for 30 days. Write a program to find the average steps per day, and identify the days when the user exceeded 10,000 steps.
+
+dict1={'a':20000,"b":50000,"c":90000,"d":3000}
+total=0
+list=[]
+for key, value in dict1.items():
+    total+=value
+    avg=total/30
+    if value>10000:
+        list.append(value)
+print(total)
+print(avg)
+print(list)
 
 
