@@ -99,5 +99,28 @@ for key,value in dicts.items():
     new_dicts[key]=new_price
 print(new_dicts) """
 
+# Q7. A school election has 4 candidates, and 30 students cast their votes. Write a program to count how many votes each candidate received and display the winner.
+""" import random
+list1=['Ram',"Shayam","Mohit","Bardx"]
+list2=[]
+for candidate in list1:
+    x=random.randint(1,30)
+    list2.append(x)
+    print(candidate)
+    candidate=x
+    print("Got Vote from" ,candidate," Candidates")
+print(f'Winner of the Election is {candidate} ,Won By Maximum Vote Of ,{max(list2)}') """
 
 
+#Q8. A library has a collection of 25 books, and each book is either available or checked out. Write a program to count the number of available books and the number of books that are checked out.
+
+dict={"Conch Bearer":'T',"The Alchemist":'F',"Atomic habits":'T'}
+count_a=0
+count_c=0
+for key,value in dict.items():
+    if value=="T":
+        count_a+=1
+    elif value=="F":
+        count_c+=1
+print(count_a,"Books are Available")
+print(count_c,"Books are Checked-Out")
