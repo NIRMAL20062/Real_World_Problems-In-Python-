@@ -128,14 +128,31 @@ print(count_c,"Books are Checked-Out") """
 
 #Q9. A university records the attendance of 100 students for 10 classes. Write a program to calculate the percentage of attendance for each student and display the list of students who attended less than 90% of the classes.
 
-dict={'A':4,"B":6,"C":8,"D":9}
+""" dict={'A':4,"B":6,"C":8,"D":9}
 list=[]
 for key , value in dict.items():
     percentage=(value/10)*100
     if percentage<90:
         x=f"{key}:Percentage of Attendance is {percentage}%"
         list.append(x)
-print(list)
+print(list) """
+
+
+
+#Q10. A sports coach needs to select 5 players from a pool of 12 for a basketball team. Write a program to calculate the number of different ways the coach can select 5 players.
+# Combination npr=n!/((n-r)!*r!)
+
+n=12 #number of players
+r= 5 #number of players to be selected
+c=n-r
+def fact1(x):
+    fact=1
+    while x>0:
+        fact=fact*x
+        x=x-1
+    return fact
+combination=fact1(n)/(fact1(c)*(fact1(r)))
+print(combination)
 
 
 
