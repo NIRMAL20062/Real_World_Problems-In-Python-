@@ -128,21 +128,21 @@ print(count_c,"Books are Checked-Out")
 
 #Q9. A university records the attendance of 100 students for 10 classes. Write a program to calculate the percentage of attendance for each student and display the list of students who attended less than 90% of the classes.
 
-""" dict={'A':4,"B":6,"C":8,"D":9}
+dict={'A':4,"B":6,"C":8,"D":9}
 list=[]
 for key , value in dict.items():
     percentage=(value/10)*100
     if percentage<90:
         x=f"{key}:Percentage of Attendance is {percentage}%"
         list.append(x)
-print(list) """
+print(list)
 
 
 
 #Q10. A sports coach needs to select 5 players from a pool of 12 for a basketball team. Write a program to calculate the number of different ways the coach can select 5 players.
 # Combination npr=n!/((n-r)!*r!)
 
-""" n=12 #number of players
+n=12 #number of players
 r= 5 #number of players to be selected
 c=n-r
 def fact1(x):
@@ -152,12 +152,12 @@ def fact1(x):
         x=x-1
     return fact
 combination=fact1(n)/(fact1(c)*(fact1(r)))
-print(combination) """
+print(combination)
 
 
 # Q11. A fitness tracker records the number of steps a person takes for 30 days. Write a program to find the average steps per day, and identify the days when the user exceeded 10,000 steps.
 
-""" dict1={'a':20000,"b":50000,"c":90000,"d":3000}
+dict1={'a':20000,"b":50000,"c":90000,"d":3000}
 total=0
 list=[]
 for key, value in dict1.items():
@@ -167,7 +167,7 @@ for key, value in dict1.items():
         list.append(value)
 print(total)
 print(avg)
-print(list) """
+print(list)
 
 
 # Q12. A fitness app is tracking the steps of users daily. A user logs 3,500 steps on Monday, 6,200 on Tuesday, and 4,800 on Wednesday. On Thursday, they plan to do a workout for 45 minutes instead of walking. The app recommends users take at least 5,000 steps a day on average. Write a program to check if the user has met their step goal by Wednesday.
