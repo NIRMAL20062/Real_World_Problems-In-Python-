@@ -157,7 +157,7 @@ print(combination) """
 
 # Q11. A fitness tracker records the number of steps a person takes for 30 days. Write a program to find the average steps per day, and identify the days when the user exceeded 10,000 steps.
 
-dict1={'a':20000,"b":50000,"c":90000,"d":3000}
+""" dict1={'a':20000,"b":50000,"c":90000,"d":3000}
 total=0
 list=[]
 for key, value in dict1.items():
@@ -167,6 +167,18 @@ for key, value in dict1.items():
         list.append(value)
 print(total)
 print(avg)
-print(list)
+print(list) """
 
+
+# Q12. A fitness app is tracking the steps of users daily. A user logs 3,500 steps on Monday, 6,200 on Tuesday, and 4,800 on Wednesday. On Thursday, they plan to do a workout for 45 minutes instead of walking. The app recommends users take at least 5,000 steps a day on average. Write a program to check if the user has met their step goal by Wednesday.
+
+dict1={'Monday':3500,"Tuesday":6200,"Wednesday":4800}
+total=0
+for key,value in dict1.items():
+    total+=value
+    avg=total/len(dict1)
+if avg==5000:
+    print("User has met their step goal by Wednesday")
+else:
+    print("User has not-met their step goal by Wednesday")
 
