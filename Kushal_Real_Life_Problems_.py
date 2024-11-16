@@ -114,7 +114,7 @@ print(f'Winner of the Election is {candidate} ,Won By Maximum Vote Of ,{max(list
 
 #Q8. A library has a collection of 25 books, and each book is either available or checked out. Write a program to count the number of available books and the number of books that are checked out.
 
-dict={"Conch Bearer":'T',"The Alchemist":'F',"Atomic habits":'T'}
+""" dict={"Conch Bearer":'T',"The Alchemist":'F',"Atomic habits":'T'}
 count_a=0
 count_c=0
 for key,value in dict.items():
@@ -123,4 +123,20 @@ for key,value in dict.items():
     elif value=="F":
         count_c+=1
 print(count_a,"Books are Available")
-print(count_c,"Books are Checked-Out")
+print(count_c,"Books are Checked-Out") """
+
+
+#Q9. A university records the attendance of 100 students for 10 classes. Write a program to calculate the percentage of attendance for each student and display the list of students who attended less than 90% of the classes.
+
+dict={'A':4,"B":6,"C":8,"D":9}
+list=[]
+for key , value in dict.items():
+    percentage=(value/10)*100
+    if percentage<90:
+        x=f"{key}:Percentage of Attendance is {percentage}%"
+        list.append(x)
+print(list)
+
+
+
+
