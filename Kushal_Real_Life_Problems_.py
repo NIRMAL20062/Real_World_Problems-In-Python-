@@ -184,7 +184,7 @@ else:
 
 #Q13. A parking garage charges INR 30 for the first hour and INR 20 for each additional hour. A car entered the garage at 9 AM and left at 2 PM. The car owner also bought a coffee from the café inside the garage for INR 63. Write a program to calculate the total parking fee.
 
-def fee(entry,exit):
+""" def fee(entry,exit):
     # entry=int(input('Enter the entry time in 24 hour format: '))
     extra_fee=63
     if entry==exit:
@@ -198,8 +198,12 @@ def fee(entry,exit):
             total_fee=30+(total_times_stayed-1)*20+extra_fee
             return total_fee
 
-print(fee(9,14))
+print(fee(9,14)) """
+
+# Q14. A household is monitoring its water usage. The total water consumption for the month is 25,000 liters. The water company charges INR 50 per 1,000 liters. The family uses 5,000 liters for gardening. Write a program to calculate the total water bill for the household, excluding gardening usage.
 
 
-
-
+def water_bill(total_water, gardening_usage):
+    bill_for_month=(((total_water)-(gardening_usage))/1000)*50
+    return bill_for_month
+print(water_bill(25000,5000))
