@@ -203,7 +203,21 @@ print(fee(9,14)) """
 # Q14. A household is monitoring its water usage. The total water consumption for the month is 25,000 liters. The water company charges INR 50 per 1,000 liters. The family uses 5,000 liters for gardening. Write a program to calculate the total water bill for the household, excluding gardening usage.
 
 
-def water_bill(total_water, gardening_usage):
+""" def water_bill(total_water, gardening_usage):
     bill_for_month=(((total_water)-(gardening_usage))/1000)*50
     return bill_for_month
-print(water_bill(25000,5000))
+print(water_bill(25000,5000)) """
+
+
+# Q15. Given a dictionary with student names and a list of booleans representing their attendance over 5 days, return a dictionary with student names and their attendance percentage.
+
+
+
+
+
+
+
+
+
+
+
