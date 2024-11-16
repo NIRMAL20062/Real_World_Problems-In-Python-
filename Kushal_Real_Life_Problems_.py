@@ -172,7 +172,7 @@ print(list) """
 
 # Q12. A fitness app is tracking the steps of users daily. A user logs 3,500 steps on Monday, 6,200 on Tuesday, and 4,800 on Wednesday. On Thursday, they plan to do a workout for 45 minutes instead of walking. The app recommends users take at least 5,000 steps a day on average. Write a program to check if the user has met their step goal by Wednesday.
 
-dict1={'Monday':3500,"Tuesday":6200,"Wednesday":4800}
+""" dict1={'Monday':3500,"Tuesday":6200,"Wednesday":4800}
 total=0
 for key,value in dict1.items():
     total+=value
@@ -180,5 +180,26 @@ for key,value in dict1.items():
 if avg==5000:
     print("User has met their step goal by Wednesday")
 else:
-    print("User has not-met their step goal by Wednesday")
+    print("User has not-met their step goal by Wednesday") """
+
+#Q13. A parking garage charges INR 30 for the first hour and INR 20 for each additional hour. A car entered the garage at 9 AM and left at 2 PM. The car owner also bought a coffee from the café inside the garage for INR 63. Write a program to calculate the total parking fee.
+
+def fee(entry,exit):
+    # entry=int(input('Enter the entry time in 24 hour format: '))
+    extra_fee=63
+    if entry==exit:
+        total_fee=0
+    elif entry>0 and exit>0:
+        total_times_stayed=exit-entry
+        if total_times_stayed==1:
+            total_fee=30+extra_fee  #30+4*20+63=110+63=173
+            return total_fee
+        else:
+            total_fee=30+(total_times_stayed-1)*20+extra_fee
+            return total_fee
+
+print(fee(9,14))
+
+
+
 
