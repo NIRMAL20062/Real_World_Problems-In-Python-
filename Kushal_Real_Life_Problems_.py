@@ -231,6 +231,22 @@ def attendence_percentage():
 print(attendence_percentage()) """
 
 
+# Q16. Given a username string, return True if the username is valid (must be between 6 and 12 characters and contain only alphanumeric characters).
+
+def username():
+    str="Nirmal2608"
+    import re
+    x = re.match('^[a-zA-Z0-9]{6,12}', str)
+    # return x
+    if x:
+        print('True')
+    else:
+        print('False')
+# print(username())
+(username())
+
+
+
 
 
 
