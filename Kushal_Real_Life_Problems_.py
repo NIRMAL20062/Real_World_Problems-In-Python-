@@ -172,7 +172,7 @@ print(list)
 
 # Q12. A fitness app is tracking the steps of users daily. A user logs 3,500 steps on Monday, 6,200 on Tuesday, and 4,800 on Wednesday. On Thursday, they plan to do a workout for 45 minutes instead of walking. The app recommends users take at least 5,000 steps a day on average. Write a program to check if the user has met their step goal by Wednesday.
 
-""" dict1={'Monday':3500,"Tuesday":6200,"Wednesday":4800}
+dict1={'Monday':3500,"Tuesday":6200,"Wednesday":4800}
 total=0
 for key,value in dict1.items():
     total+=value
@@ -180,11 +180,11 @@ for key,value in dict1.items():
 if avg==5000:
     print("User has met their step goal by Wednesday")
 else:
-    print("User has not-met their step goal by Wednesday") """
+    print("User has not-met their step goal by Wednesday")
 
 #Q13. A parking garage charges INR 30 for the first hour and INR 20 for each additional hour. A car entered the garage at 9 AM and left at 2 PM. The car owner also bought a coffee from the café inside the garage for INR 63. Write a program to calculate the total parking fee.
 
-""" def fee(entry,exit):
+def fee(entry,exit):
     # entry=int(input('Enter the entry time in 24 hour format: '))
     extra_fee=63
     if entry==exit:
@@ -198,21 +198,21 @@ else:
             total_fee=30+(total_times_stayed-1)*20+extra_fee
             return total_fee
 
-print(fee(9,14)) """
+print(fee(9,14))
 
 # Q14. A household is monitoring its water usage. The total water consumption for the month is 25,000 liters. The water company charges INR 50 per 1,000 liters. The family uses 5,000 liters for gardening. Write a program to calculate the total water bill for the household, excluding gardening usage.
 
 
-""" def water_bill(total_water, gardening_usage):
+def water_bill(total_water, gardening_usage):
     bill_for_month=(((total_water)-(gardening_usage))/1000)*50
     return bill_for_month
-print(water_bill(25000,5000)) """
+print(water_bill(25000,5000))
 
 
 # Q15. Given a dictionary with student names and a list of booleans representing their attendance over 5 days, return a dictionary with student names and their attendance percentage.
 
 
-""" attendance = {
+""" """ attendance = {
     "Alice": [True, False, True, True, False],
     "Bob": [True, True, False, True, True],
     "Charlie": [False, True, True, False, True],
@@ -228,12 +228,11 @@ def attendence_percentage():
             else:
                 attend_dict[key]=((value.count(False))/len(value))*100
     return attend_dict
-print(attendence_percentage()) """
-
+print(attendence_percentage())
 
 # Q16. Given a username string, return True if the username is valid (must be between 6 and 12 characters and contain only alphanumeric characters).
 
-""" def username():
+def username():
     str="Nirmal2608"
     import re
     x = re.match('^[a-zA-Z0-9]{6,12}', str)
@@ -243,7 +242,7 @@ print(attendence_percentage()) """
     else:
         print('False')
 # print(username())
-(username()) """
+(username())
 
 
 # Q17. Given the current room conditions, find out if the air conditioner should be turned on.
