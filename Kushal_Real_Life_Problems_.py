@@ -212,6 +212,23 @@ print(water_bill(25000,5000)) """
 # Q15. Given a dictionary with student names and a list of booleans representing their attendance over 5 days, return a dictionary with student names and their attendance percentage.
 
 
+""" attendance = {
+    "Alice": [True, False, True, True, False],
+    "Bob": [True, True, False, True, True],
+    "Charlie": [False, True, True, False, True],
+    "David": [True, True, True, True, True],
+    "Eve": [False, False, True, False, True]
+}
+def attendence_percentage():
+    attend_dict = {}
+    for key,value in attendance.items():
+        for booleans in value:
+            if booleans==True:
+                attend_dict[key]=((value.count(True))/len(value))*100
+            else:
+                attend_dict[key]=((value.count(False))/len(value))*100
+    return attend_dict
+print(attendence_percentage()) """
 
 
 
