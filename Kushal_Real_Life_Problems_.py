@@ -212,7 +212,7 @@ print(water_bill(25000,5000))
 # Q15. Given a dictionary with student names and a list of booleans representing their attendance over 5 days, return a dictionary with student names and their attendance percentage.
 
 
-""" """ attendance = {
+attendance = {
     "Alice": [True, False, True, True, False],
     "Bob": [True, True, False, True, True],
     "Charlie": [False, True, True, False, True],
@@ -278,7 +278,7 @@ else:
 
 #Q25. Given a set of coin denominations and a target amount, find the minimum number of coins required to make that amount.
 
-coin_denominations = {1,2, 5, 10, 50, 100}
+""" coin_denominations = {1,2, 5, 10, 50, 100}
 target=200
 sum=0
 count=0    #2 lana hai
@@ -290,8 +290,23 @@ if max(coin_denominations)<target:
             if target>sum:
                 # sum=sum+
                 continue
-print(count)
+print(count) """
 
+coin_denominations = {1,2, 5, 10, 50, 100}
+target=256  #2*100+1*50+1*5+1*1
+sum=0
+store=[]
+x=sorted(coin_denominations ,reverse=True)
+for ele in x:
+    y=(target//ele)
+    target=target-y*ele
+    if y>0:
+       store.append(y)
+print(store)
+sum=0
+for i in store:
+    sum=sum+i
+print(f'Minimum Number of Coins Required={sum}')
 
 # Q26. A company offers discounts based on a tiered system, where each product’s discount is determined by a percentage based on its price. Write a Python program that calculates the total discounted price of a list of products. The program should take a list of product prices (eg. 50, 150, 600, 1200) and apply the respective discount to each product, then return the total discounted cost.
 
