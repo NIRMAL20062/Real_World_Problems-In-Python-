@@ -3,11 +3,21 @@ In the journey of learning to code, after a point, its important for students to
 Note:that in several problems, specific values are mentioned, which you should use as a input to your function in a suitable format. The code should work even if we change the values.
 
 Q1. A teacher has 30 students in a class. Each student has a list of 5 exam scores. Write a program to calculate and display the average score of each student.
+
+
 Q2. A store has 10 different items. The store manager wants to apply a 10% discount on every item that costs more than INR 50. Write a program to display the updated prices for each item.
+
+
 There is a running competition with 20 participants. You need to find the top 3 participants who ran the fastest.
 Q3. A movie website has ratings from 5 users for 3 different movies. Each user gives a rating between 1 to 5. Write a program to find the highest-rated movie.
+
+
 Q4. A bank records the daily transactions of 20 customers. Some transactions are deposits, and some are withdrawals. Write a program that calculates the total deposit and withdrawal amounts for each customer.
+
+
 Q5. A cafeteria has a menu of 15 items. Every day, the cafeteria gives a random discount of 5%, 10%, or 15% on all items. Write a program to calculate the new prices for each item after the discount is applied.
+
+
 Q6.A school election has 4 candidates, and 30 students cast their votes. Write a program to count how many votes each candidate received and display the winner.
 Q7.A library has a collection of 25 books, and each book is either available or checked out. Write a program to count the number of available books and the number of books that are checked out.
 Q8. A university records the attendance of 100 students for 10 classes. Write a program to calculate the percentage of attendance for each student and display the list of students who attended less than 90% of the classes.
