@@ -251,7 +251,7 @@ print(attendence_percentage()) """
 # Used AI for Help
 
 
-def should_turn_on_ac(current_temperature, current_humidity, desired_temperature=24):
+""" def should_turn_on_ac(current_temperature, current_humidity, desired_temperature=24):
     # Check if the current temperature exceeds the desired temperature
     if current_temperature > desired_temperature:
         return True
@@ -268,18 +268,30 @@ current_humidity = 65  # Current humidity in %
 if should_turn_on_ac(current_temp, current_humidity):
     print("The air conditioner should be turned on.")
 else:
-    print("The air conditioner can remain off.")
+    print("The air conditioner can remain off.") """
+
+
+
+# 18-24 0N WAITING-LIST
 
 
 
 
+#Q25. Given a set of coin denominations and a target amount, find the minimum number of coins required to make that amount.
 
-
-
-
-
-
-
+coin_denominations = {1,2, 5, 10, 50, 100}
+target=200
+sum=0
+count=0    #2 lana hai
+if max(coin_denominations)<target:
+    # for coin in coin_denominations:
+        while sum==target:
+            sum=sum+max(coin_denominations)  #100
+            count+=1
+            if target>sum:
+                # sum=sum+
+                continue
+print(count)
 
 
 
