@@ -279,7 +279,7 @@ else:
 
 #Q25. Given a set of coin denominations and a target amount, find the minimum number of coins required to make that amount.
 
-coin_denominations = {1,2, 5, 10, 50, 100}
+""" coin_denominations = {1,2, 5, 10, 50, 100}
 target=200
 sum=0
 count=0    #2 lana hai
@@ -291,7 +291,77 @@ if max(coin_denominations)<target:
             if target>sum:
                 # sum=sum+
                 continue
-print(count)
+print(count) """
+
+
+# Q26. A company offers discounts based on a tiered system, where each product’s discount is determined by a percentage based on its price. Write a Python program that calculates the total discounted price of a list of products. The program should take a list of product prices (eg. 50, 150, 600, 1200) and apply the respective discount to each product, then return the total discounted cost.
+
+""" def calculate_discounted_price(price):
+    if price <= 50:
+        return price  # No discount
+    elif 51 <= price <= 200:
+        return price * (1 - 0.10)  # 10% discount
+    elif 201 <= price <= 500:
+        return price * (1 - 0.15)  # 15% discount
+    else:  # Above $500
+        return price * (1 - 0.20)  # 20% discount
+def calculate_total_discounted_price(prices):
+    total_discounted_price = 0
+    for price in prices:
+        total_discounted_price += calculate_discounted_price(price)
+    return total_discounted_price
+product_prices = [50, 150, 600, 1200]
+total_price = calculate_total_discounted_price(product_prices)
+print(f"Original Prices: {product_prices}")
+print(f"Total Discounted Price: {total_price:.2f}") """
+
+# Q27. Imagine you’re tracking your monthly expenses and want to know how much you’re spending on each category, like groceries, rent, transportation, etc. Write a Python program that calculates the total expenses for each category and shows you where most of your money is going. This could involve asking the user to enter expenses in different categories, summing up each category’s expenses and displaying the results and the category with the highest expenditure.
+
+
+# def get_expenditure(groceries,rent,transportation):
+#     expenditure = {}
+
+def expense_tracker():
+    # Dictionary to store categories and their expenses
+    expenses = {}
+
+    print("Welcome to the Monthly Expense Tracker!")
+    print("Enter your expenses for each category. Type 'done' to finish.\n")
+
+    # Input expenses for categories
+    while True:
+        category = input("Enter a category (e.g., Groceries, Rent, Transportation): ").strip()
+        if category.lower() == 'done':
+            break
+        
+        # Initialize category if not present
+        if category not in expenses:
+            expenses[category] = 0
+
+        # Enter expense for the category
+        try:
+            expense = float(input(f"Enter expense for {category}: "))
+            expenses[category] += expense
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
+
+    # Display results
+    print("\nExpense Summary:")
+    for category, total in expenses.items():
+        print(f"{category}: {total:.2f}")
+
+    # Find category with the highest expenditure
+    if expenses:
+        highest_category = max(expenses, key=expenses.get)
+        print(f"\nThe category with the highest expenditure is '{highest_category}' with {expenses[highest_category]:.2f}.")
+    else:
+        print("No expenses recorded.")
+expense_tracker()
+
+
+
+
+
 
 
 
