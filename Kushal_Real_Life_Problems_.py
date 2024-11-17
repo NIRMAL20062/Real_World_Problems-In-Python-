@@ -291,6 +291,23 @@ if max(coin_denominations)<target:
                 # sum=sum+
                 continue
 print(count) """
+coin_denominations = {1,2, 5, 10, 50, 100}
+target=256  #2*100+1*50+1*5+1*1
+sum=0
+store=[]
+x=sorted(coin_denominations ,reverse=True)
+for ele in x:
+    y=(target//ele)
+    target=target-y*ele
+    if y>0:
+       store.append(y)
+print(store)
+sum=0
+for i in store:
+    sum=sum+i
+print(f'Minimum Number of Coins Required={sum}')
+
+
 
 coin_denominations = {1,2, 5, 10, 50, 100}
 target=256  #2*100+1*50+1*5+1*1
@@ -422,7 +439,7 @@ def get_score():
 
 #Q29. You are given a dictionary representing the inventory of a store. The keys are the item names, and the values are tuples containing the available stock and price. Write a Python function that checks if the requested quantity of the item is available. If available, reduces the stock by the quantity purchased and returns the total price for that purchase. If not available, returns a message stating “Not enough stock.”
 
-def check():
+""" def check():
     store_inventory = {
         "Smartphone": (50, 699),       # (Stock, Price)
         "Laptop": (30, 1200),
@@ -449,6 +466,6 @@ def check():
             print('Not enough stock.')
     else:
         print("No, the product is not available in the inventory.")
-check()
+check() """
 
 
