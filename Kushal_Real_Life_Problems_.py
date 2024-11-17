@@ -321,7 +321,7 @@ print(f"Total Discounted Price: {total_price:.2f}") """
 # def get_expenditure(groceries,rent,transportation):
 #     expenditure = {}
 
-def expense_tracker():
+""" def expense_tracker():
     # Dictionary to store categories and their expenses
     expenses = {}
 
@@ -356,16 +356,57 @@ def expense_tracker():
         print(f"\nThe category with the highest expenditure is '{highest_category}' with {expenses[highest_category]:.2f}.")
     else:
         print("No expenses recorded.")
-expense_tracker()
+expense_tracker() """
+
+# Q28. You are taking an exam with four types of questions: 10 questions are 4 marks each, 10 questions are 3 marks each, 10 questions are 2 marks each, and 5 questions are 1 mark each. For each correct answer, you receive full marks, while each incorrect answer results in a deduction of 1 mark. You answered 5 questions from the 4-mark section, 4 questions from the 3-mark section, 7 questions from the 2-mark section, and 3 questions from the 1-mark section. Out of these, 8 answers were incorrect. Calculate the total marks you achieved, your percentage score, and determine if you passed the exam, given that the passing mark is 80. Write a function that takes these numbers as input and does all the calculations to return the output
+
+""" def get_score():
+    name=input('Enter our Name: ')
+    print(f'{name} Your Score Card With Details')
+    print('Enter The Mentioned Details Below First \n')
+
+           # Question-1
+
+    print(('\nEnter the number of questions solved  from 10 questions of 4-marks each: '))
+    Q1_right=int(input('\nEnter the number of questions are correct : '))
+    Q1_wrong=int(input('\nEnter the number of questions are wrong : '))
+    Q1_score=(Q1_right*4)-(Q1_wrong*1)
+
+       # Question-2
 
 
+    print('\nEnter the number of questions solved correctly from 10 questions of 3-marks each: ')
+    Q2_right=int(input('\nEnter the number of questions are correct : '))
+    Q2_wrong=int(input('\nEnter the number of questions are wrong : '))
+    Q2_score=(Q2_right*3)-(Q2_wrong*1)
+
+        # Question-3
 
 
+    print('\nEnter the number of questions solved correctly from 10 questions of 2-marks each: ')
+    Q3_right=int(input('\nEnter the number of questions are correct : '))
+    Q3_wrong=int(input('\nEnter the number of questions are wrong : '))
+    Q3_score=(Q3_right*2)-(Q3_wrong*1)
+     
+        # Question-4
+
+    print('\nEnter the number of questions solved correctly from 5 questions of 1-marks each: ')
+    Q4_right=int(input('\nEnter the number of questions are correct : '))
+    Q4_wrong=int(input('\nEnter the number of questions are wrong : '))
+    Q4_score=(Q4_right*1)-(Q4_wrong*1)
+
+    # results
+    passing_mark=80
+    total=(Q1_score+Q2_score+Q3_score+Q4_score)
+    percentage=(total/(10*4+10*3+10*2+5*1))*100
+    if total>=passing_mark:
+        print(f'WOW!!! \n \n You have passed the exam with a total score of {total} and a percentage of {percentage:.2f}%')
+    else:
+        print('You Failed')
+(get_score()) """
 
 
-
-
-
+#Q29. You are given a dictionary representing the inventory of a store. The keys are the item names, and the values are tuples containing the available stock and price. Write a Python function that checks if the requested quantity of the item is available. If available, reduces the stock by the quantity purchased and returns the total price for that purchase. If not available, returns a message stating “Not enough stock.”
 
 
 
