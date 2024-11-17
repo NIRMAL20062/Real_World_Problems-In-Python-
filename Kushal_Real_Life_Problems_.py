@@ -408,5 +408,33 @@ expense_tracker() """
 
 #Q29. You are given a dictionary representing the inventory of a store. The keys are the item names, and the values are tuples containing the available stock and price. Write a Python function that checks if the requested quantity of the item is available. If available, reduces the stock by the quantity purchased and returns the total price for that purchase. If not available, returns a message stating “Not enough stock.”
 
+def check():
+    store_inventory = {
+        "Smartphone": (50, 699),       # (Stock, Price)
+        "Laptop": (30, 1200),
+        "Headphones": (100, 150),
+        "Apple": (200, 2),
+        "Rice (1kg)": (100, 5),
+        "Milk (1L)": (50, 1.5),
+        "T-Shirt": (80, 20),
+        "Jeans": (60, 40),
+        "Jacket": (40, 100),
+        "Notebook": (150, 3),
+        "Pen": (300, 1),
+        "Marker": (120, 2),
+    }
+    product = input('Enter The Product Name: ')
+    if product in store_inventory:
+        print("Yes, the product is available in the inventory.")
+        quantity = int(input('Enter the quantity you want to purchase: '))
+        if quantity <= store_inventory[product][0]:
+            total_price = quantity * float(store_inventory[product][1])
+            print(f'The total price for the purchase is {total_price:.2f}')
+            store_inventory[product] = (store_inventory[product][0] - quantity)
+        else:
+            print('Not enough stock.')
+    else:
+        print("No, the product is not available in the inventory.")
+check()
 
 
