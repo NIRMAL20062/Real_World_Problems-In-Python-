@@ -250,7 +250,7 @@ def username():
 # Used AI for Help
 
 
-def should_turn_on_ac(current_temperature, current_humidity, desired_temperature=24):
+""" def should_turn_on_ac(current_temperature, current_humidity, desired_temperature=24):
     # Check if the current temperature exceeds the desired temperature
     if current_temperature > desired_temperature:
         return True
@@ -267,22 +267,145 @@ current_humidity = 65  # Current humidity in %
 if should_turn_on_ac(current_temp, current_humidity):
     print("The air conditioner should be turned on.")
 else:
-    print("The air conditioner can remain off.")
+    print("The air conditioner can remain off.") """
+
+
+
+# 18-24 0N WAITING-LIST
 
 
 
 
+#Q25. Given a set of coin denominations and a target amount, find the minimum number of coins required to make that amount.
+
+""" coin_denominations = {1,2, 5, 10, 50, 100}
+target=200
+sum=0
+count=0    #2 lana hai
+if max(coin_denominations)<target:
+    # for coin in coin_denominations:
+        while sum==target:
+            sum=sum+max(coin_denominations)  #100
+            count+=1
+            if target>sum:
+                # sum=sum+
+                continue
+print(count) """
 
 
+# Q26. A company offers discounts based on a tiered system, where each product’s discount is determined by a percentage based on its price. Write a Python program that calculates the total discounted price of a list of products. The program should take a list of product prices (eg. 50, 150, 600, 1200) and apply the respective discount to each product, then return the total discounted cost.
+
+""" def calculate_discounted_price(price):
+    if price <= 50:
+        return price  # No discount
+    elif 51 <= price <= 200:
+        return price * (1 - 0.10)  # 10% discount
+    elif 201 <= price <= 500:
+        return price * (1 - 0.15)  # 15% discount
+    else:  # Above $500
+        return price * (1 - 0.20)  # 20% discount
+def calculate_total_discounted_price(prices):
+    total_discounted_price = 0
+    for price in prices:
+        total_discounted_price += calculate_discounted_price(price)
+    return total_discounted_price
+product_prices = [50, 150, 600, 1200]
+total_price = calculate_total_discounted_price(product_prices)
+print(f"Original Prices: {product_prices}")
+print(f"Total Discounted Price: {total_price:.2f}") """
+
+# Q27. Imagine you’re tracking your monthly expenses and want to know how much you’re spending on each category, like groceries, rent, transportation, etc. Write a Python program that calculates the total expenses for each category and shows you where most of your money is going. This could involve asking the user to enter expenses in different categories, summing up each category’s expenses and displaying the results and the category with the highest expenditure.
 
 
+# def get_expenditure(groceries,rent,transportation):
+#     expenditure = {}
+
+""" def expense_tracker():
+    # Dictionary to store categories and their expenses
+    expenses = {}
+
+    print("Welcome to the Monthly Expense Tracker!")
+    print("Enter your expenses for each category. Type 'done' to finish.\n")
+
+    # Input expenses for categories
+    while True:
+        category = input("Enter a category (e.g., Groceries, Rent, Transportation): ").strip()
+        if category.lower() == 'done':
+            break
+        
+        # Initialize category if not present
+        if category not in expenses:
+            expenses[category] = 0
+
+        # Enter expense for the category
+        try:
+            expense = float(input(f"Enter expense for {category}: "))
+            expenses[category] += expense
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
+
+    # Display results
+    print("\nExpense Summary:")
+    for category, total in expenses.items():
+        print(f"{category}: {total:.2f}")
+
+    # Find category with the highest expenditure
+    if expenses:
+        highest_category = max(expenses, key=expenses.get)
+        print(f"\nThe category with the highest expenditure is '{highest_category}' with {expenses[highest_category]:.2f}.")
+    else:
+        print("No expenses recorded.")
+expense_tracker() """
+
+# Q28. You are taking an exam with four types of questions: 10 questions are 4 marks each, 10 questions are 3 marks each, 10 questions are 2 marks each, and 5 questions are 1 mark each. For each correct answer, you receive full marks, while each incorrect answer results in a deduction of 1 mark. You answered 5 questions from the 4-mark section, 4 questions from the 3-mark section, 7 questions from the 2-mark section, and 3 questions from the 1-mark section. Out of these, 8 answers were incorrect. Calculate the total marks you achieved, your percentage score, and determine if you passed the exam, given that the passing mark is 80. Write a function that takes these numbers as input and does all the calculations to return the output
+
+""" def get_score():
+    name=input('Enter our Name: ')
+    print(f'{name} Your Score Card With Details')
+    print('Enter The Mentioned Details Below First \n')
+
+           # Question-1
+
+    print(('\nEnter the number of questions solved  from 10 questions of 4-marks each: '))
+    Q1_right=int(input('\nEnter the number of questions are correct : '))
+    Q1_wrong=int(input('\nEnter the number of questions are wrong : '))
+    Q1_score=(Q1_right*4)-(Q1_wrong*1)
+
+       # Question-2
 
 
+    print('\nEnter the number of questions solved correctly from 10 questions of 3-marks each: ')
+    Q2_right=int(input('\nEnter the number of questions are correct : '))
+    Q2_wrong=int(input('\nEnter the number of questions are wrong : '))
+    Q2_score=(Q2_right*3)-(Q2_wrong*1)
+
+        # Question-3
 
 
+    print('\nEnter the number of questions solved correctly from 10 questions of 2-marks each: ')
+    Q3_right=int(input('\nEnter the number of questions are correct : '))
+    Q3_wrong=int(input('\nEnter the number of questions are wrong : '))
+    Q3_score=(Q3_right*2)-(Q3_wrong*1)
+     
+        # Question-4
+
+    print('\nEnter the number of questions solved correctly from 5 questions of 1-marks each: ')
+    Q4_right=int(input('\nEnter the number of questions are correct : '))
+    Q4_wrong=int(input('\nEnter the number of questions are wrong : '))
+    Q4_score=(Q4_right*1)-(Q4_wrong*1)
+
+    # results
+    passing_mark=80
+    total=(Q1_score+Q2_score+Q3_score+Q4_score)
+    percentage=(total/(10*4+10*3+10*2+5*1))*100
+    if total>=passing_mark:
+        print(f'WOW!!! \n \n You have passed the exam with a total score of {total} and a percentage of {percentage:.2f}%')
+    else:
+        print('You Failed')
+(get_score()) """
 
 
-
+#Q29. You are given a dictionary representing the inventory of a store. The keys are the item names, and the values are tuples containing the available stock and price. Write a Python function that checks if the requested quantity of the item is available. If available, reduces the stock by the quantity purchased and returns the total price for that purchase. If not available, returns a message stating “Not enough stock.”
 
 
 
