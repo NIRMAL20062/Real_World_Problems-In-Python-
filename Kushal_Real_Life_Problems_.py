@@ -273,6 +273,140 @@ else:
 
 # 18-24 0N WAITING-LIST
 
+# Q19 Write a function to check if a given string is a valid PAN card number.
+def is_valid_car_number(car_number):
+    # Check length constraints
+    if len(car_number) < 6 or len(car_number) > 10:
+        return False
+
+    # Check state code (first two characters are letters)
+    if not car_number[:2].isalpha() or not car_number[:2].isupper():
+        return False
+
+    # Check RTO code (next two characters are digits)
+    if not car_number[2:4].isdigit():
+        return False
+
+    # Identify the series (1-2 letters after RTO code)
+    series_index = 4
+    series = ""
+    while series_index < len(car_number) and car_number[series_index].isalpha():
+        series += car_number[series_index]
+        series_index += 1
+
+    if len(series) < 1 or len(series) > 2 or not series.isupper():
+        return False
+
+    # Check the vehicle number (remaining characters are digits)
+    vehicle_number = car_number[series_index:]
+    if not vehicle_number.isdigit() or len(vehicle_number) < 1 or len(vehicle_number) > 4:
+        return False
+
+    return True
+
+
+# Example usage
+print(is_valid_car_number("MH12AB1234"))  # True
+print(is_valid_car_number("DL4CAP2940"))  # True
+print(is_valid_car_number("1234AB12MH"))  # False
+print(is_valid_car_number("MH12A12345"))  # False
+
+#Q20 Write a function to check if a given string is a valid PAN card number.
+def is_valid_pan(pan):
+    # Check if the length is exactly 10
+    if len(pan) != 10:
+        return False
+    
+    # Check the first five characters are uppercase letters
+    if not pan[:5].isalpha() or not pan[:5].isupper():
+        return False
+    
+    # Check the next four characters are digits
+    if not pan[5:9].isdigit():
+        return False
+    
+    # Check the last character is an uppercase letter
+    if not pan[9].isalpha() or not pan[9].isupper():
+        return False
+    
+    # If all checks pass, the PAN number is valid
+    return True
+
+# Test cases
+print(is_valid_pan("ABCDE1234F"))  # Should return True
+print(is_valid_pan("AB1234CDE5"))  # Should return False
+print(is_valid_pan("abcde1234f"))  # Should return False
+print(is_valid_pan("ABCDE12345"))  # Should return False
+
+# Q22. Given a string, check if it’s a valid postal code in India.
+def is_valid_postal_code(postal_code):
+    # Check if the postal code has exactly 6 digits
+    if len(postal_code) != 6:
+        return False
+
+    # Check if the postal code contains only digits
+    if not postal_code.isdigit():
+        return False
+
+    # Check if the postal code starts with '0'
+    if postal_code[0] == '0':
+        return False
+
+    return True
+
+
+# Example usage
+print(is_valid_postal_code("110001"))  # True
+print(is_valid_postal_code("560037"))  # True
+print(is_valid_postal_code("012345"))  # False
+print(is_valid_postal_code("ABCDE1"))  # False
+
+#Q23. Given a string, return True if it is a valid hex color code.
+def is_valid_hex_color(code):
+    # Check if the string starts with '#' and has either 4 or 7 characters
+    if len(code) not in (4, 7) or code[0] != '#':
+        return False
+
+    # Check if the remaining characters are valid hexadecimal digits
+    for char in code[1:]:
+        if char not in '0123456789ABCDEFabcdef':
+            return False
+
+    return True
+
+
+# Example usage
+print(is_valid_hex_color("#FFF"))      # True
+print(is_valid_hex_color("#123456"))  # True
+print(is_valid_hex_color("123456"))   # False
+print(is_valid_hex_color("#12G"))     # False
+
+# Q24. An invoice ID at a company starts with two uppercase letters, followed by four digits, and ends with an uppercase letter (e.g., “AB1234X”). Write a function to check if the input string matches this format.
+def is_valid_invoice_id(invoice_id):
+    # Check if the length is exactly 7
+    if len(invoice_id) != 7:
+        return False
+
+    # Check if the first two characters are uppercase letters
+    if not (invoice_id[:2].isalpha() and invoice_id[:2].isupper()):
+        return False
+
+    # Check if the next four characters are digits
+    if not invoice_id[2:6].isdigit():
+        return False
+
+    # Check if the last character is an uppercase letter
+    if not (invoice_id[6].isalpha() and invoice_id[6].isupper()):
+        return False
+
+    return True
+
+
+# Example usage
+print(is_valid_invoice_id("AB1234X"))  # True
+print(is_valid_invoice_id("AB12X34"))  # False
+print(is_valid_invoice_id("ab1234x"))  # False
+print(is_valid_invoice_id("AB12345"))  # False
 
 
 
